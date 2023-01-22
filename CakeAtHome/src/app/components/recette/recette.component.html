@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="container">
+    <nav class="navbar navbar-light bg-light"></nav>
+    <h2> Liste des recettes</h2>
+</div>
+    <table>
+      <tr>
+        <th>id_recette</th>
+        <TH>titre_recette</TH>
+        <th>description_recette</th>
+        <TH>categorie_recette</TH>
+        <TH>niveaudifficulte_recette</TH>
+        <TH>tempspreparation_recette</TH>
+        <TH>tempscuisson_recette</TH>
+        <TH>tempstotal_recette</TH>
+        <TH>nbpersonne_recette</TH>
+        <TH>recettepremium_recette</TH>
+
+
+      </tr>
+      <tr *ngFor="let p of recettes">
+        <td>{{p.id_recette}}</td>
+        <td>{{p.titre_recette}}</td>
+        <td>{{p.description_recette}}</td>
+        <td>{{p.categorie_recette}}</td>
+        <td>{{p.niveaudifficulte_recette}}</td>
+        <td>{{p.tempspreparation_recette}}</td>
+        <td>{{p.tempscuisson_recette}}</td>
+        <td>{{p.tempstotal_recette}}</td>
+        <td>{{p.nbpersonne_recette}}</td>
+        <td>{{p.recettepremium_recette}}</td>
+
+      </tr>
+    </table>
+  </div>
