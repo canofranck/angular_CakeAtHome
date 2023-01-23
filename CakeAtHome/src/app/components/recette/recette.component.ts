@@ -9,6 +9,8 @@ import { RecetteService } from "src/app/services/recette/recette.service";
 })
  export class RecetteComponent implements  OnInit{
 
+
+
   declare recettes : any [];
   constructor (private recetteService : RecetteService,
     private router : Router){
@@ -16,11 +18,12 @@ import { RecetteService } from "src/app/services/recette/recette.service";
 }
 ngOnInit(): void {
   this.getRecettes();
+
 }
 getRecettes() {
   this.recetteService.findAllRecettes().subscribe(
     data =>{
-      console.log(data);
+      console.table(data);
         this.recettes = data as any[];
     }
   );

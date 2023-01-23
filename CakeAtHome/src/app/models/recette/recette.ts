@@ -1,7 +1,7 @@
 export class Recette {
    public id_recette:number;
    public titre_recette:string;
-  //  public date_recette:Date;
+   public date_recette:Date;
    public description_recette:string;
    public categorie_recette: string;
    public niveaudifficulte_recette:string;
@@ -14,7 +14,7 @@ export class Recette {
    constructor (){
     this.id_recette=0;
     this.titre_recette="";
-    // this.date_recette='';
+    this.date_recette=new Date();
     this.description_recette="";
     this.categorie_recette="";
     this.niveaudifficulte_recette="";
