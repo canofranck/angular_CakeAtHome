@@ -13,6 +13,7 @@ import { PopulaireComponent } from './components/populaire/populaire.component';
 import { TendanceComponent } from './components/tendance/tendance.component';
 import { RandomComponent } from './components/random/random.component';
 import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './components/home/home.component';
     PopulaireComponent,
     TendanceComponent,
     RandomComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
