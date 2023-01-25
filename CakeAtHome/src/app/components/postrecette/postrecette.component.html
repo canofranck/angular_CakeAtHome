@@ -1,22 +1,92 @@
 
-<!doctype html>
-<html class="no-js" lang="">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ranna | Submit Recipes</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.png">
-
-    <!-- Modernizr Js -->
-    <script src="../../../assets/js/modernizr-3.6.0.min.js"></script>
-</head>
 
 <body>
+  <!-- <div class="row">
+    <form class=" col s12"[formGroup]="form"(ngSubmit)="create() " action="post">
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="titre_recette">titre_recette</label>
+            <input id="titre_recette" type="text" formControlName="titre_recette" data-length="255">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="date_recette">date_recette</label>
+            <input id="date_recette" type="text" formControlName="date_recette" data-length="20">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="description_recette">description_recette</label>
+            <input id="description_recette" type="text" formControlName="description_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="categorie_recette"> categorie_recette</label>
+            <input id="categorie_recette" type="text" formControlName="categorie_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="niveaudifficulte_recette">niveaudifficulte_recette</label>
+            <input id="niveaudifficulte_recette" type="text" formControlName="niveaudifficulte_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="tempspreparation_recette">tempspreparation_recette</label>
+            <input id="tempspreparation_recette" type="text" formControlName="tempspreparation_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="tempscuisson_recette">tempscuisson_recette</label>
+            <input id="tempscuisson_recette" type="text" formControlName="tempscuisson_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="tempstotal_recette">tempstotal_recette</label>
+            <input id="tempstotal_recette" type="text" formControlName="tempstotal_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="nbpersonne_recette">nbpersonne_recette</label>
+            <input id="nbpersonne_recette" type="text" formControlName="nbpersonne_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="recettepremium_recette">recettepremium_recette</label>
+            <input id="recettepremium_recette" type="text" formControlName="recettepremium_recette" data-length="10">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="Input-field col s16">
+          <label for ="id_utilisateur">id_utilisateur</label>
+            <input id="id_utilisateur" type="text" formControlName="id_utilisater" data-length="10">
+
+        </div>
+      </div>
+      <button type="submit">Soumettre</button>
+    </form>
+
+  </div> -->
+
+  {{ form.value | json}}
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -58,11 +128,11 @@
             <div class="container">
                 <div class="row gutters-60">
                     <div class="col-lg-8">
-                        <form class="submit-recipe-form">
+                        <form class="submit-recipe-form"[formGroup]="form"(ngSubmit)="create() " action="post">
                             <div class="form-group">
                                 <label>Titre de la Recette</label>
-                                <input type="text" placeholder="Nom de la Recette" class="form-control" name="name"
-                                    data-error="Subject field is required" required>
+                                <input id="titre_recette" type="text" placeholder="Nom de la Recette" formControlName="titre_recette" data-length="255">
+
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
@@ -78,19 +148,19 @@
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea placeholder="Entrez ICI la description de la recette" class="textarea form-control" name="message" id="form-message"
-                                    rows="7" cols="20" data-error="Message field is required" required></textarea>
+                                <textarea placeholder="Entrez ICI la description de la recette" class="textarea form-control" name="description_recette" id="description_recette" formControlName="description_recette" data-length="255"
+                                    rows="7" cols="20" ></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="additional-input-wrap">
                                 <label>ajouter vos photos de la recette</label>
                                 <div class="form-group">
                                     <ul class="upload-img">
-                                        <li><img src="img/figure/upload-banner1.jpg" alt="Upload Image"></li>
-                                        <li><img src="img/figure/upload-banner1.jpg" alt="Upload Image"></li>
-                                        <li><img src="img/figure/upload-banner1.jpg" alt="Upload Image"></li>
-                                        <li><img src="img/figure/upload-banner1.jpg" alt="Upload Image"></li>
-                                        <li><img src="img/figure/upload-banner1.jpg" alt="Upload Image"></li>
+                                        <li><img src="../../../assets/img/figure/upload-banner1.jpg" alt="Upload Image"></li>
+                                        <li><img src="../../../assets/img/figure/upload-banner1.jpg" alt="Upload Image"></li>
+                                        <li><img src="../../../assets/img/figure/upload-banner1.jpg" alt="Upload Image"></li>
+                                        <li><img src="../../../assets/img/figure/upload-banner1.jpg" alt="Upload Image"></li>
+                                        <li><img src="../../../assets/img/figure/upload-banner1.jpg" alt="Upload Image"></li>
                                     </ul>
                                     <button type="submit" class="btn-upload"><i class="fas fa-cloud-upload-alt"></i>ENVOYER</button>
                                 </div>
@@ -101,22 +171,24 @@
                                     <div class="col-lg-6">
                                         <div class="form-group additional-input-box icon-left">
                                             <i class="far fa-clock"></i>
-                                            <input type="text" placeholder="Temps de préparation: 00.00.00" class="form-control"
-                                                name="name">
+
+
+                                            <input id="tempspreparation_recette" type="text" placeholder="Temps de préparation: 00.00.00" formControlName="tempspreparation_recette" data-length="255"
+                                                name="tempspreparation_recette">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group additional-input-box icon-left">
                                             <i class="fas fa-utensils"></i>
-                                            <input type="text" placeholder="Temps de Cuisson: 00.00.00" class="form-control"
-                                                name="name">
+                                            <input id="tempscuisson_recette" type="text" placeholder="Temps de Cuisson: 00.00.00" formControlName="tempscuisson_recette" data-length="255"
+                                                name="tempscuisson_recette">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group additional-input-box icon-left">
                                             <i class="fas fa-users"></i>
-                                            <input type="text" placeholder="Nombre de Personne: 00" class="form-control"
-                                                name="name">
+                                            <input id="nbpersonne_recette" type="text" placeholder="Nombre de Personne: 00" formControlName="nbpersonne_recette" data-length="255"
+                                                name="nbpersonne_recette">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -221,7 +293,7 @@
         </section>
         <!-- Submit Recipe Area End Here -->
         <!-- Footer Area Start Here -->
-      
+
         <!-- Footer Area End Here -->
     </div>
     <!-- Search Box Start Here -->
@@ -275,4 +347,4 @@
 </body>
 
 
-</html>
+
