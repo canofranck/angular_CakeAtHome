@@ -14,6 +14,7 @@ import { TendanceComponent } from './components/tendance/tendance.component';
 import { RandomComponent } from './components/random/random.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PostrecetteComponent } from './components/postrecette/postrecette.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactComponent } from './components/contact/contact.component';
     TendanceComponent,
     RandomComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    PostrecetteComponent
   ],
   imports: [
     BrowserModule,
