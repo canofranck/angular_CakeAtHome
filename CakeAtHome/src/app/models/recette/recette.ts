@@ -10,7 +10,8 @@ export class Recette {
    public tempstotal_recette:string;
    public nbpersonne_recette:string;
    public recettepremium_recette:boolean;
-  public id_utilisateur:number;
+   public id_utilisateur:number;
+
    constructor (){
     this.id_recette=0;
     this.titre_recette="";
@@ -23,7 +24,8 @@ export class Recette {
     this.tempstotal_recette="";
     this.nbpersonne_recette="";
     this.recettepremium_recette=false;
-    this.id_utilisateur=5;
+    this.id_utilisateur=0;
+
 
    }
 }

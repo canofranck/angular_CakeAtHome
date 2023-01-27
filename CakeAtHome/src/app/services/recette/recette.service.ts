@@ -1,7 +1,8 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpHeaders, HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Recette } from "src/app/models/recette/recette";
 import { AppSettings } from "src/app/settings/app.settings";
+
 
 // @Injectable({providedIn: 'root'})
 @Injectable({
@@ -18,6 +19,7 @@ export class RecetteService {
   saveRecette (recette:Recette){
     return this.http.post(AppSettings.APP_URL+"/recette",JSON.stringify(recette),this.httpOptions);
   }
+
   editRecette(id_recette:number){
     return this.http.get(AppSettings.APP_URL+"/recettes/"+id_recette)
    }

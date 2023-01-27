@@ -16,6 +16,18 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PostrecetteComponent } from './components/postrecette/postrecette.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IngredientsComponent } from './components/ingredients/ingredients.component';
+import { AbonnementComponent } from './components/abonnement/abonnement.component';
+import { CommentaireComponent } from './components/commentaire/commentaire.component';
+import { EtapeComponent } from './components/etape/etape.component';
+import { ImagerecetteComponent } from './components/imagerecette/imagerecette.component';
+import { UtilisateurComponent } from './components/utilisateur/utilisateur.component';
+import { AddUtilisateurComponent } from './components/utilisateur/add-utilisateur/add-utilisateur.component';
+import { EditUtilisateurComponent } from './components/utilisateur/edit-utilisateur/edit-utilisateur.component';
+import { ListUtilisateurComponent } from './components/utilisateur/list-utilisateur/list-utilisateur.component';
+import { ListRecetteComponent } from './components/recette/list-recette/list-recette.component';
+import { AddRecetteComponent } from './components/recette/add-recette/add-recette.component';
+import { EditRecetteComponent } from './components/recette/edit-recette/edit-recette.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +42,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RandomComponent,
     HomeComponent,
     ContactComponent,
-    PostrecetteComponent
+    PostrecetteComponent,
+    IngredientsComponent,
+    AbonnementComponent,
+    CommentaireComponent,
+    EtapeComponent,
+    ImagerecetteComponent,
+    UtilisateurComponent,
+    AddUtilisateurComponent,
+    EditUtilisateurComponent,
+    ListUtilisateurComponent,
+    ListRecetteComponent,
+    AddRecetteComponent,
+    EditRecetteComponent
   ],
   imports: [
     BrowserModule,

@@ -86,7 +86,7 @@
 
   </div> -->
 
-  {{ form.value | json}}
+
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -102,6 +102,7 @@
     <!-- ScrollUp End Here -->
     <div id="wrapper" class="wrapper">
         <!-- Header Area Start Here -->
+        <app-header></app-header>
 
         <!-- Header Area End Here -->
         <!-- Inne Page Banner Area Start Here -->
@@ -123,6 +124,7 @@
             </div>
         </section>
         <!-- Inne Page Banner Area End Here -->
+        {{ form.value | json}}
         <!-- Submit Recipe Area Start Here -->
         <section class="submit-recipe-page-wrap padding-top-74 padding-bottom-50">
             <div class="container">
@@ -193,8 +195,8 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group additional-input-box icon-left">
-                                            <i class="fas fa-eye"></i>
-                                            <input type="text" placeholder="Nombre de vue : 00" class="form-control" name="name">
+                                            <i class="far fa-clock"></i>
+                                            <input id="tempstotal_recette" type="text" placeholder="Temps de cuisson total : 00.00.00" formControlName="tempstotal_recette" data-length="255" name="tempstotal_recette">
                                         </div>
                                     </div>
                                 </div>
@@ -233,49 +235,7 @@
                                 <button type="submit" class="btn-upload"><i class="flaticon-add-plus-button"></i>ADD NEW
                                     INGREDIENT</button>
                             </div>
-                            <div class="additional-input-wrap">
-                                <label>Nutrition Facts:</label>
-                                <div class="row gutters-5">
-                                    <div class="col-6">
-                                        <div class="form-group additional-input-box icon-right">
-                                            <input type="text" placeholder="People Views: 00" class="form-control" name="name">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group additional-input-box icon-right">
-                                            <input type="text" placeholder="People Views: 00" class="form-control" name="name">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group additional-input-box icon-right">
-                                            <input type="text" placeholder="People Views: 00" class="form-control" name="name">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group additional-input-box icon-right">
-                                            <input type="text" placeholder="People Views: 00" class="form-control" name="name">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group additional-input-box icon-right">
-                                            <input type="text" placeholder="People Views: 00" class="form-control" name="name">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group additional-input-box icon-right">
-                                            <input type="text" placeholder="People Views: 00" class="form-control" name="name">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn-upload"><i class="flaticon-add-plus-button"></i>ADD NEW
-                                    INGREDIENT</button>
-                            </div>
+
                             <div class="form-group">
                                 <label>Description</label>
                                 <div class="summernote"></div>
@@ -293,7 +253,7 @@
         </section>
         <!-- Submit Recipe Area End Here -->
         <!-- Footer Area Start Here -->
-
+        <app-footer></app-footer>
         <!-- Footer Area End Here -->
     </div>
     <!-- Search Box Start Here -->
@@ -343,7 +303,24 @@
         </div>
     </div>
     <!-- Modal End-->
-
+    <!-- Jquery Js -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins Js -->
+    <script src="js/plugins.js"></script>
+    <!-- Owl Carousel Js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Summernote JS -->
+    <script src="js/summernote.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="js/select2.full.min.js"></script>
+    <!-- Smoothscroll Js -->
+    <script src="js/smoothscroll.min.js"></script>
+    <!-- Custom Js -->
+    <script src="js/main.js"></script>
 </body>
 
 
