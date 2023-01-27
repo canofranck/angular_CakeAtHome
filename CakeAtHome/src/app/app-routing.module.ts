@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
 import { PostrecetteComponent } from './components/postrecette/postrecette.component';
 import { AddRecetteComponent } from './components/recette/add-recette/add-recette.component';
+import { ListRecetteComponent } from './components/recette/list-recette/list-recette.component';
 import { RecetteComponent } from './components/recette/recette.component';
 import { AddUtilisateurComponent } from './components/utilisateur/add-utilisateur/add-utilisateur.component';
 import { EditUtilisateurComponent } from './components/utilisateur/edit-utilisateur/edit-utilisateur.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'utilisateur',component:UtilisateurComponent},
   {path:'editutilisateur/:id',component:EditUtilisateurComponent},
   {path:'listutilisateur',component:ListUtilisateurComponent},
+  {path:'listrecette',component:ListRecetteComponent},
 ];
 
 @NgModule({
