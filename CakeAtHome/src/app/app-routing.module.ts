@@ -1,5 +1,11 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { combineLatest } from 'rxjs';
+import { AbonnementComponent } from './components/abonnement/abonnement.component';
+import { AddAbonnementComponent } from './components/abonnement/add-abonnement/add-abonnement.component';
+import { EditAbonnementComponent } from './components/abonnement/edit-abonnement/edit-abonnement.component';
+
+import { ListAbonnementComponent } from './components/abonnement/list-abonnement/list-abonnement.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
@@ -14,20 +20,32 @@ import { EditUtilisateurComponent } from './components/utilisateur/edit-utilisat
 import { ListUtilisateurComponent } from './components/utilisateur/list-utilisateur/list-utilisateur.component';
 import { UtilisateurComponent } from './components/utilisateur/utilisateur.component';
 
+
 const routes: Routes = [
   {path:'',component:HomeComponent  },
   {path:'recette',component:RecetteComponent  },
   {path:'contact',component:ContactComponent },
   {path:'postrecette',component:PostrecetteComponent },
   {path:'ingredients',component:IngredientsComponent},
-  {path:'addutilisateur',component:AddUtilisateurComponent},
-  {path:'addrecette',component:AddRecetteComponent},
-  {path:'listutilisateur',component:ListUtilisateurComponent},
+
   {path:'utilisateur',component:UtilisateurComponent},
+  {path:'utilisateur/:id',component:ListUtilisateurComponent},
+  {path:'addutilisateur',component:AddUtilisateurComponent},
   {path:'editutilisateur/:id',component:EditUtilisateurComponent},
-  {path:'listutilisateur',component:ListUtilisateurComponent},
-  {path:'listrecette',component:ListRecetteComponent},
+  // {path:'listutilisateur',component:ListUtilisateurComponent},
+  {path:'recette',component:RecetteComponent},
+  {path:'recette/:id',component:ListRecetteComponent},
+  {path:'addrecette',component:AddRecetteComponent},
   {path:'editrecette/:id',component:EditRecetteComponent},
+  {path:'listrecette',component:ListRecetteComponent},
+
+  {path:'abonnement',component:AbonnementComponent},
+  {path:'abonnement/:id',component:ListAbonnementComponent},
+  {path:'addabonnement',component:AddAbonnementComponent},
+  {path:'editabonnement/:id',component:EditAbonnementComponent},
+  {path:'listabonnement',component:ListAbonnementComponent},
+
+
 ];
 
 @NgModule({

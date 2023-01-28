@@ -28,6 +28,9 @@ import { ListUtilisateurComponent } from './components/utilisateur/list-utilisat
 import { ListRecetteComponent } from './components/recette/list-recette/list-recette.component';
 import { AddRecetteComponent } from './components/recette/add-recette/add-recette.component';
 import { EditRecetteComponent } from './components/recette/edit-recette/edit-recette.component';
+import { AddAbonnementComponent } from './components/abonnement/add-abonnement/add-abonnement.component';
+import { EditAbonnementComponent } from './components/abonnement/edit-abonnement/edit-abonnement.component';
+import { ListAbonnementComponent } from './components/abonnement/list-abonnement/list-abonnement.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { EditRecetteComponent } from './components/recette/edit-recette/edit-rec
     ListUtilisateurComponent,
     ListRecetteComponent,
     AddRecetteComponent,
-    EditRecetteComponent
+    EditRecetteComponent,
+    AddAbonnementComponent,
+    EditAbonnementComponent,
+    ListAbonnementComponent
   ],
   imports: [
     BrowserModule,

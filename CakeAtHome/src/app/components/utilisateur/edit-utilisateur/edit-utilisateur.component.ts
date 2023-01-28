@@ -5,6 +5,7 @@ import { Utilisateur } from "src/app/models/utilisateur/utilsateur";
 import { UtilisateurService } from "src/app/services/utilisateur/utilisateur.service";
 
 
+
 @Component({
   selector: 'app-edit-utilisateur',
   templateUrl: './edit-utilisateur.component.html',
@@ -12,7 +13,7 @@ import { UtilisateurService } from "src/app/services/utilisateur/utilisateur.ser
 })
 export class EditUtilisateurComponent implements OnInit {
 
-  declare editForm: FormGroup;
+  declare editutilisateurForm: FormGroup;
   declare utilisateur: Utilisateur;
   constructor(
     private utilisateurService : UtilisateurService,
@@ -23,7 +24,7 @@ export class EditUtilisateurComponent implements OnInit {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.editForm = this.formBuilder.group({
+    this.editutilisateurForm = this.formBuilder.group({
       id_utilisateur: [''],
       pseudo_utilisateur: ['',Validators.required],
       password_utilisateur: ['',Validators.required],
@@ -40,17 +41,17 @@ export class EditUtilisateurComponent implements OnInit {
       data => {
         console.log(data)
         //complete le form avec le produit récupéré
-        this.editForm.setValue(data);
+        this.editutilisateurForm.setValue(data);
       }
     )
   }
   update() {
 
-    if (this.editForm.valid) {
+    if (this.editutilisateurForm.valid) {
 
-      console.log(this.editForm.value);
+      console.log(this.editutilisateurForm.value);
 
-      this.utilisateurService.updateUser(this.editForm.value).subscribe(
+      this.utilisateurService.updateUser(this.editutilisateurForm.value).subscribe(
         () => {
           this.router.navigate(['/utilisateur'])
 

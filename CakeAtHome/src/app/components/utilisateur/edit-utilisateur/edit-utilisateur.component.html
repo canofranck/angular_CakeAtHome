@@ -2,7 +2,7 @@
 <br>
 <H2 class="text-center">Editer un utilisateur</H2>
 <div class="container border">
-    <form [formGroup]="editForm" (ngSubmit)="update()">
+    <form [formGroup]="editutilisateurForm" (ngSubmit)="update()">
         <div class="form-group">
             <div class="input-field col s16">
                 <label for="id_utilisateur"> id_utilisateur</label>
@@ -41,4 +41,4 @@
     </form>
     <br>
 </div>
-{{editForm.value | json}}
+{{editutilisateurForm.value | json}}

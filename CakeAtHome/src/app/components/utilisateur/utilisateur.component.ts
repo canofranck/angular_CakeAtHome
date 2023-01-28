@@ -11,11 +11,10 @@ import { UtilisateurService } from 'src/app/services/utilisateur/utilisateur.ser
 })
 export class UtilisateurComponent implements  OnInit {
   declare utilisateur: any[];
-
+  declare form : FormGroup;
   constructor(
     private utilisateurService: UtilisateurService,
-    private router: Router,
-    private route: ActivatedRoute
+  
     )
      {}
 
