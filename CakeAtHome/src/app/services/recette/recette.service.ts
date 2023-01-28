@@ -21,11 +21,11 @@ export class RecetteService {
   }
 
   editRecette(id_recette:number){
-    return this.http.get(AppSettings.APP_URL+"/recettes/"+id_recette)
+    return this.http.get(AppSettings.APP_URL+"/recette/"+id_recette)
    }
 
    updateRecette(recette:Recette){
-    return this.http.put(AppSettings.APP_URL+"/recettes",JSON.stringify(recette),this.httpOptions);
+    return this.http.put(AppSettings.APP_URL+"/recettes/",JSON.stringify(recette),this.httpOptions);
    }
 
    deleteRecette(id_recette:number){
