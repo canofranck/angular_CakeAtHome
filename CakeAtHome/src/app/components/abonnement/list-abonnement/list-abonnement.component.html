@@ -30,4 +30,77 @@
 
 </table>
 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-uppercase mb-0">Liste des Abonnements</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table no-wrap user-table mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">id abonnement</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">id_utilisateur</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">abonné</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">  date de debut</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">     duree</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of abonnement">
+                      <th scope="row">     {{item.id_abonnement}}</th>
+
+                      <td>
+                          <span class="font-medium mb-0">{{item.id_abonnement}}</span>
+
+                      </td>
+                      <td>
+                          <span class="text-muted">{{item.id_utilisateur}}</span>
+
+                      </td>
+                      <td>
+                          <span class="text-muted">{{item.abonnementpris}}</span>
+
+                      </td>
+                      <td>
+                          <span class="text-muted">{{item.abonnementdatedebut}}</span>
+
+                      </td>
+                      <td>
+                        <td>
+                          <span class="text-muted">{{item.abonnementduree}}</span>
+
+                      </td>
+                      <td>
+                        <!-- <select class="form-control category-select" id="exampleFormControlSelect1">
+                          <option>Modulator</option>
+                          <option>Admin</option>
+                          <option>User</option>
+                          <option>Subscriber</option>
+                        </select> -->
+                      </td>
+                      <td>
+                        <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button> -->
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i></button>
+                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button>
+                      </td>
+                    </tr>
+
+
+
+
+
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

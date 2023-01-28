@@ -31,6 +31,9 @@ import { EditRecetteComponent } from './components/recette/edit-recette/edit-rec
 import { AddAbonnementComponent } from './components/abonnement/add-abonnement/add-abonnement.component';
 import { EditAbonnementComponent } from './components/abonnement/edit-abonnement/edit-abonnement.component';
 import { ListAbonnementComponent } from './components/abonnement/list-abonnement/list-abonnement.component';
+import { AddCommentaireComponent } from './components/commentaire/add-commentaire/add-commentaire.component';
+import { EditCommentaireComponent } from './components/commentaire/edit-commentaire/edit-commentaire.component';
+import { ListCommentaireComponent } from './components/commentaire/list-commentaire/list-commentaire.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ListAbonnementComponent } from './components/abonnement/list-abonnement
     EditRecetteComponent,
     AddAbonnementComponent,
     EditAbonnementComponent,
-    ListAbonnementComponent
+    ListAbonnementComponent,
+    AddCommentaireComponent,
+    EditCommentaireComponent,
+    ListCommentaireComponent
   ],
   imports: [
     BrowserModule,
