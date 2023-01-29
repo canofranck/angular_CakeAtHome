@@ -29,5 +29,6 @@ export class UtilisateurService {
   deleteUser(id:number){
     return this.http.delete(AppSettings.APP_URL + '/utilisateurs/'+id);
   }
+
 }
 

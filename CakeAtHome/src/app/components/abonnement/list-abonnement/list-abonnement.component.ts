@@ -22,7 +22,7 @@ export class ListAbonnementComponent implements  OnInit {
     this.abonnementService.findAllUsers().subscribe(
       data => {
         console.log(data);
-        this.abonnement= data;
+        this.abonnement= data as any ;
 
       }
     )

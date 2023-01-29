@@ -36,3 +36,6 @@ body{
   max-width: 150px;
   border-radius: 20px;
 }
+td,th{
+  text-align : center;
+}

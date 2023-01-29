@@ -24,7 +24,7 @@
         <td>{{item.password_utilisateur}}</td>
         <td>{{item.genre}}</td>
         <td>{{item.email_utilisateur}}</td>
-        <td>{{item.dateInscription_utilisateur}}</td>
+        <td>{{item.dateInscription_utilisateur | date:"dd/MM/yy"}}</td>
         <td>{{item.ville_utilisateur}}</td>
         <td>{{item.mesfavoris_utilisateur}}</td>
         <td><a  routerLink="/editutilisateur/{{item.id_utilisateur}}" class="btn btn-warning waves-effect waves-light btn right #e65100 green">Edit</a>
