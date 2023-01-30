@@ -36,15 +36,26 @@ export class AddAbonnementComponent implements OnInit{
 create(){
   this.utilisateurService.editUser(this.formAddAbonnement.value.id_utilisateur).subscribe(
     (utilisateur) => {
-      this.formAddAbonnement.value.utilisateur = utilisateur;
-      this.abonnementService.saveUser(this.formAddAbonnement.value).subscribe(
-        () => {
-          this.router.navigate(['/abonnement'])
-
-       }
-
-  )
-}
-  )
+      if(utilisateur) {
+        this.formAddAbonnement.value.utilisateur = utilisateur;
+        this.abonnementService.saveUser(this.formAddAbonnement.value).subscribe(
+          () => {
+            this.router.navigate(['/abonnement'])
+          },
+          (error) => {
+            console.error(error);
+            // Afficher un message d'erreur à l'utilisateur
+          }
+        )
+      } else {
+        console.error("L'édition de l abonnement a échoué");
+        // Afficher un message d'erreur à l'utilisateur
+      }
+    },
+    (error) => {
+      console.error(error);
+      // Afficher un message d'erreur à l'utilisateur
+    }
+  );
 }
 }

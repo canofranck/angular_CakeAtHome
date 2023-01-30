@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+
 import { Utilisateur } from 'src/app/models/utilisateur/utilsateur';
 
 import { UtilisateurService } from 'src/app/services/utilisateur/utilisateur.service';
@@ -12,9 +13,12 @@ import { UtilisateurService } from 'src/app/services/utilisateur/utilisateur.ser
 export class UtilisateurComponent implements  OnInit {
   declare utilisateur: any[];
   declare form : FormGroup;
+
   constructor(
     private utilisateurService: UtilisateurService,
-  
+    private router : Router,
+    private route: ActivatedRoute,
+
     )
      {}
 
@@ -36,7 +40,7 @@ export class UtilisateurComponent implements  OnInit {
     this.utilisateurService.deleteUser(id).subscribe
       (
         () => {
-
+          this.router.navigate(['/utilisateur'])
         }
       )
 

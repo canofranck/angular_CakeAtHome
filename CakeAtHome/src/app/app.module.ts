@@ -34,6 +34,7 @@ import { ListAbonnementComponent } from './components/abonnement/list-abonnement
 import { AddCommentaireComponent } from './components/commentaire/add-commentaire/add-commentaire.component';
 import { EditCommentaireComponent } from './components/commentaire/edit-commentaire/edit-commentaire.component';
 import { ListCommentaireComponent } from './components/commentaire/list-commentaire/list-commentaire.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ListCommentaireComponent } from './components/commentaire/list-commenta
     ListAbonnementComponent,
     AddCommentaireComponent,
     EditCommentaireComponent,
-    ListCommentaireComponent
+    ListCommentaireComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

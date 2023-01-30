@@ -6,6 +6,10 @@ import { AddAbonnementComponent } from './components/abonnement/add-abonnement/a
 import { EditAbonnementComponent } from './components/abonnement/edit-abonnement/edit-abonnement.component';
 
 import { ListAbonnementComponent } from './components/abonnement/list-abonnement/list-abonnement.component';
+import { AddCommentaireComponent } from './components/commentaire/add-commentaire/add-commentaire.component';
+import { CommentaireComponent } from './components/commentaire/commentaire.component';
+import { EditCommentaireComponent } from './components/commentaire/edit-commentaire/edit-commentaire.component';
+import { ListCommentaireComponent } from './components/commentaire/list-commentaire/list-commentaire.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
@@ -44,6 +48,12 @@ const routes: Routes = [
   {path:'addabonnement',component:AddAbonnementComponent},
   {path:'editabonnement/:id',component:EditAbonnementComponent},
   {path:'listabonnement',component:ListAbonnementComponent},
+
+  {path:'commentaire',component:CommentaireComponent},
+  {path:'commentaire/:id',component:ListCommentaireComponent},
+  {path:'addcommentaire',component:AddCommentaireComponent},
+  {path:'editcommentaire',component:EditCommentaireComponent},
+  {path:'listcommentaire',component:ListCommentaireComponent},
 
 
 ];
